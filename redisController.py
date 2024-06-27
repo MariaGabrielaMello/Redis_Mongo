@@ -6,13 +6,13 @@ from pymongo.server_api import ServerApi
 
 # Conexão com o Redis
 r = redis.Redis(
-    host='redis-11497.c308.sa-east-1-1.ec2.redns.redis-cloud.com',
-    port=11497,
-    password='DMTswoMFOXwEqoJwKeXTuZOijGQswS3z'
+    host='redis-host-aqui',
+    port=11111,
+    password='senha-aqui'
 )
 
 # Conexão com o MongoDB
-client = pymongo.MongoClient("mongodb+srv://admin:admin@fatec.x655kkc.mongodb.net/?retryWrites=true&w=majority&appName=FATEC", server_api=ServerApi('1'))
+client = pymongo.MongoClient("mongodb+srv://user:senha-aqui", server_api=ServerApi('1'))
 db = client.MercadoLivre
 product_collection = db["Produto"]
 vendor_collection = db["Vendedor"]
